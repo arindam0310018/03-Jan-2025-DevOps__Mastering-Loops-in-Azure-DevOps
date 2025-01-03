@@ -8,6 +8,19 @@ In this Session, I will walk you through __The Art of Iteration: Starting the Cy
 
 This is a quick start guide to introduce the topic and how it is relevant to the real world.
 
+| IMPORTANT NOTE:- |
+| --------- |
+
+The YAML Pipeline is tested on __WINDOWS BUILD AGENT__ Only!!!
+
+| __REQUIREMENTS:-__ |
+| --------- |
+
+1. Azure Subscription.
+2. Azure DevOps Organisation and Project.
+3. Service Principal with Required RBAC (Contributor) applied on Subscription or Resource Group(s).
+5. Azure Resource Manager Service Connection in Azure DevOps.
+
 | __REFERENCE LINKS:-__ |
 | --------- |
 | 1. [Microsoft Learn - Azure Devops - Expressions](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops#each-keyword). |
