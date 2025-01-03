@@ -1,0 +1,35 @@
+trigger:
+  none
+
+######################
+#DECLARE PARAMETERS:-
+######################
+parameters:
+- name: RGNAME
+  displayName: Please Provide the Resource Group Name:-
+  type: object
+  default: [AMRG001,AMRG002,AMRG003]
+
+######################
+#DECLARE VARIABLES:-
+######################
+variables:
+  BuildAgent: windows-latest
+
+#########################
+# Declare Build Agents:-
+#########################
+pool:
+  vmImage: $(BuildAgent)
+
+###################
+# Declare Stages:-
+###################
+stages:
+  - ${{ each rg in parameters.RGNAME }}:
+    - stage: CREATE_${{ rg }}
+      jobs:
+        - job: CreateResourceGroup
+          steps:
+            - script: echo "Creating "${{ rg }}""
+    
